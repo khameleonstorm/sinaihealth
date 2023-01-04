@@ -1,0 +1,116 @@
+.container{
+  width: 100%;
+  padding: 50px 0;
+}
+
+.wrapper1{
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.left{
+  width: 530px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.left h1{
+  font-size: 3.8rem;
+  font-weight: 300;
+}
+
+.left p{
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.left a{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 12px 25px;
+  border:  1.5px solid #007bff;
+  border-radius: 30px;
+  transition: all ease .5s;
+}
+
+.left a:hover{
+  gap: 15px;
+  color: #007bff;
+}
+
+.right{
+  width: 450px;
+}
+
+.imgWrapper{
+  width: 100%;
+  position: relative;
+}
+
+.imgWrapper img{
+  width: 100%;
+  object-fit: cover;
+}
+
+.wrapper2{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 130px 0 0 0;
+  background-image: url(../../public/assets/lab_bg.png);
+  background-position-y: 40%;
+  background-position-x: 70%;
+}
+
+.img{
+  width: 90%;
+}
+
+.wrapper2 img{
+  width: 100%;
+  object-fit: contain;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+.container{
+  padding: 50px 20px;
+}
+.wrapper1{
+  flex-direction: column;
+  gap: 100px 0;
+}
+.wrapper2{
+  display: none;
+}
+
+.left, .right{
+  width: 100%;
+}
+
+}
+
+
+@media screen and (max-width: 720px) {
+.container{
+  padding: 100px 10px;
+}
+
+.left h1{
+  font-size: 10vw;
+}
+
+.left p{
+  font-size: 1rem;
+  font-weight: 200;
+}
+}

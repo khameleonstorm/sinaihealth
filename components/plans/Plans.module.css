@@ -1,0 +1,144 @@
+.container{
+  width: 100%;
+  padding: 100px 0;
+}
+
+.title{
+  font-size: 3rem;
+  font-weight: 300;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  gap: 30px;
+}
+
+
+.card{
+  width: 320px;
+  border-radius: 20px;
+  padding: 30px 20px 20px 20px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.03), 0 4px 10px 0 rgba(0, 0, 0, 0.09);
+  position: relative;
+  overflow: hidden;
+  background-color: rgba(113, 113, 113, 0.1);
+  backdrop-filter: blur(20px);
+  transition: all ease-in-out .3s;
+  border-top: 15px solid #007bff;
+}
+
+.card:nth-child(2){
+  border-top: 15px solid #00cc7b;
+}
+
+.card h3{
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.card h1{
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin: 40px 0;
+}
+
+.card h1 span{
+  font-size: 1.2rem;
+  font-weight: 400;
+  display: inline-block;
+  padding: 10px;
+  text-align: start;
+}
+
+.card h1 b{
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.points{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.points span{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.points span svg{
+  font-size: 1.1rem;
+}
+
+.card button{
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  border: 1.5px solid #007bff;
+  color: #007bff;
+  border-radius: 40px;
+  transition: all ease .5s;
+}
+
+.card button:hover{
+  background: #007bff;
+  color: white;
+}
+
+
+.card:nth-child(2) button{
+  width: 100%;
+  padding: 15px;
+  margin-top: 30px;
+  border: 1.5px solid #00cc7b;
+  background: #00cc7b;
+  color: white;
+  border-radius: 40px;
+  transition: all ease .5s;
+}
+
+.card:nth-child(2) button:hover{
+  background: none;
+  color: #00cc7b;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+.title{
+  font-size: 11vw;
+  padding: 100px 0 50px 0;
+}
+
+.wrapper{
+  padding: 0 10px;
+  align-items: center;
+}
+
+.card{
+  max-width: 350px;
+  width: 100%;
+}
+}
+
+
+@media screen and (max-width: 720px) {
+.wrapper{
+  flex-direction: column;
+}
+
+.card{
+  max-width: 320px;
+  width: 100%;
+}
+}
