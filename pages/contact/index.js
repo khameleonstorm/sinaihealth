@@ -1,13 +1,13 @@
-import NavBar from "../../components/NavBar/NavBar"
 import HomeHero from "../../components/HomeHero/HomeHero"
 import ContactForm from "../../components/ContactForm/ContactForm"
 import Footer from "../../components/Footer/Footer"
 import { contact } from "../../utils/heroes"
+import Navbar from "../../components/NavBar/NavBar"
 
 export default function index() {
   return (
     <>
-      <NavBar />
+      <Navbar />
       <HomeHero heroes={contact} regular={true}/>
       <ContactForm />
       <Footer />
