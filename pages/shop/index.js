@@ -3,6 +3,7 @@ import DrugCards from "../../components/DrugCards/DrugCards";
 import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import ShopBottomNav from "../../components/ShopBottomNav/ShopBottomNav";
+import { drugs } from "../../utils/drugs";
 
 export default function index() {
   return (
@@ -14,9 +15,9 @@ export default function index() {
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
       </Head>
       <Navbar cart={true}/>
-      <DrugCards shop={true}/>
+      <DrugCards drugs={drugs} shop={true}/>
       <ShopBottomNav />
-      <Footer />
+      <Footer drug={true}/>
     </>
   )
 }

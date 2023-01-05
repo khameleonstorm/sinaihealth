@@ -5,9 +5,10 @@ import Link from 'next/link';
 import { FaFacebookF, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { AiFillInstagram } from 'react-icons/ai';
 
-export default function Footer() {
+export default function Footer({drug}) {
+
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={drug ?{paddingBottom: "80px"}: {}}>
       <div className={styles.wrapper}>
         <div className={styles.logo}>
           <Image src={logo} alt="health sinai logo" />

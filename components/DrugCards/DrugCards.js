@@ -1,13 +1,14 @@
 import styles from "./DrugCards.module.css";
-import { drugs } from "../../utils/drugs";
 import Image from "next/image";
 import { AiFillStar } from "react-icons/ai";
 import { BsCart4 } from "react-icons/bs";
 import { MdFavoriteBorder } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/router"
 
-export default function DrugCards({shop}) {
+export default function DrugCards({drugs, shop, details}) {
+  const router = useRouter()
   const [search, setSearch] = useState(null)
   const [filteredDoc, setFilteredDoc] = useState(null)
 
@@ -21,7 +22,7 @@ export default function DrugCards({shop}) {
 
   return (
     <>
-    {!shop &&<h1 className={styles.title}>Drugs Top Collection</h1>}
+    {!shop || details &&<h1 className={styles.title}>Drugs Top Collection</h1>}
     {shop && 
     <div className={styles.search}>
       <div>
@@ -34,7 +35,7 @@ export default function DrugCards({shop}) {
       {filteredDoc?.map((drug, i) => 
       <div key={i} className={styles.card}>
         <MdFavoriteBorder className={styles.fav}/>
-        <Image src={drug.src} alt={drug.name} width="250" height="250"/>
+        <Image src={drug.src} alt={drug.name} width="250" height="250" onClick={() => {router.push(`./shop/${i}`)}}/>
         <h2 className={styles.name}>{drug.name}</h2>
         <div className={styles.rating}>
           <AiFillStar color="orange"/>

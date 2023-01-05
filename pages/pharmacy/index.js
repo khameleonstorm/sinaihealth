@@ -4,6 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import HomeHero from "../../components/HomeHero/HomeHero";
 import Navbar from "../../components/Navbar/Navbar";
 import { pharmacy } from "../../utils/heroes";
+import { drugs } from "../../utils/drugs";
 
 export default function index() {
   return (
@@ -16,8 +17,8 @@ export default function index() {
       </Head>
       <Navbar cart={true}/>
       <HomeHero heroes={pharmacy} regular={true} shop={true}/>
-      <DrugCards />
-      <Footer />
+      <DrugCards drugs={drugs} />
+      <Footer drug={true}/>
       </>
   )
 }
