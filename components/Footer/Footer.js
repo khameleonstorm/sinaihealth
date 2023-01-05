@@ -45,6 +45,8 @@ export default function Footer() {
           <Link href="#">Orthopaedic</Link>
         </div>
       </div>
+
+      <div className={styles.copyright}>COPYRIGHT 2017 © SINAI HEALTH</div>
     </div>
   )
 }

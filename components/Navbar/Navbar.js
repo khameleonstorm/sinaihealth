@@ -19,7 +19,7 @@ export default function Navbar({cart}) {
       <div className={styles.wrapper}>
         <div className={styles.logo}>
           <Link href="/">
-            <Image priority src={logo} alt="mountsinai logo" width={110}/>
+            <Image priority={true} src={logo} alt="mountsinai logo" width={110}/>
           </Link>
         </div>
         <div className={styles.menu} style={menu? {right: "0"} : {right: "-100vw"}}>

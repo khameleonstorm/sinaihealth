@@ -166,6 +166,7 @@
   z-index: 3000;
   position: fixed;
   right: 0;
+  top: 20px;
 }
 
 .hamburger span{
@@ -196,6 +197,7 @@
 .cartAmount{
   position: fixed;
   left: 50%;
+  top: 20px;
 }
 
 }
