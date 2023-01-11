@@ -4,8 +4,15 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import ShopBottomNav from "../../components/ShopBottomNav/ShopBottomNav";
 import { drugs } from "../../utils/drugs";
+import Cart from "../../components/Cart/Cart";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
+import Checkout from "../../components/checkout/Checkout";
 
 export default function index() {
+  const { showCart, showCheckout } = useContext(CartContext)
+
+
   return (
     <>
       <Head>
@@ -18,6 +25,8 @@ export default function index() {
       <DrugCards drugs={drugs} shop={true}/>
       <ShopBottomNav />
       <Footer drug={true}/>
+      {showCart &&<Cart />}
+      {showCheckout &&<Checkout />}
     </>
   )
 }

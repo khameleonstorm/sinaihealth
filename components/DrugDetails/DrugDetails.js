@@ -1,24 +1,47 @@
 import { Rating } from '@mui/material';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { BsCart4 } from 'react-icons/bs';
 import styles from './DrugDetails.module.css';
 import { drugs } from "../../utils/drugs";
 import DrugCards from "../DrugCards/DrugCards"
+import { CartContext } from "../../context/CartContext";
 
 export default function DrugDetails({drug}) {
   const [value, setValue] = useState(2)
   const [quantity, setQuantity] = useState(1)
   const [relatedDrugs, setRelatedDrugs] = useState(null)
   const [isRelated, setIsRelated] = useState(false)
+  const { items, dispatch } = useContext(CartContext)
+  
+  const reduceQuantity = () =>{
+    const newItem = {...drug, quantity: drug.quantity - 1}
 
-  const reduceQuantity = () => {
-    if(quantity !== 1) setQuantity(prev => prev - 1)
+    if(drug.quantity > 1) {
+      dispatch({type: "UPDATEQUANTITY", payload: newItem})
+      setQuantity(prev => prev - 1)
+    }
   }
 
-  const addQuantity = () => {
-    setQuantity(prev => prev + 1)
+  const addQuantity = () =>{
+    const checkArray = items?.filter((item) => item.name === drug.name)
+
+    if(checkArray.length === 0) {
+      dispatch({type: "ADDITEM", payload: {...drug, quantity: drug.quantity + 1}})
+    } else {
+      const newItem = {...drug, quantity: drug.quantity + 1}
+      dispatch({type: "UPDATEQUANTITY", payload: newItem})
+      setQuantity(prev => prev + 1)
+    }
   }
+
+  
+  const addToCart = () => {
+    dispatch({type: "ADDITEM", payload: drug})
+  }
+
+
+
 
   useEffect(() =>{
     if(drugs){
@@ -55,7 +78,7 @@ export default function DrugDetails({drug}) {
         <p className={styles.desc}>{drug.desc}</p>
 
         <div className={styles.addTo}>
-          <button className={styles.button2}><span><BsCart4 /></span>Add to cart</button>
+          <button className={styles.button2} onClick={addToCart}><span><BsCart4 /></span>Add to cart</button>
           <button className={styles.button3}><span><BsCart4 /></span>Buy Now</button>
           <div className={styles.button1}>
             <span onClick={reduceQuantity}>-</span>

@@ -1,0 +1,227 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  background-color: whitesmoke;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  z-index: 10000;
+}
+
+.close{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+}
+
+.back{
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+}
+
+.wrapper{
+  width: 100%;
+  max-width: 1100px;
+  padding: 40px 10px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  overflow-x: hidden;
+}
+
+.formWrapper{
+  width: 100%;
+  max-width: 500px;
+}
+
+.title{
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+h2.title{
+  font-size: 1.5rem;
+  font-weight: 300;
+  padding: 10px 0;
+}
+
+h2.title span{
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+h3.title{
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+h3.title span{
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+h4.title{
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 20px 0;
+}
+
+.formWrapper form{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.total{
+  width: 100%;
+  max-width: 370px;
+}
+
+.card{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+  margin-bottom: 10px;
+}
+
+.card img{
+  width: 30px ;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+.card div{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.name{
+  width: 200px;
+  font-size: .8rem;
+  font-weight: 400;
+}
+
+.name2{
+  width: 200px;
+  font-size: .5rem;
+  font-weight: 400;
+}
+
+.amount{
+  width: 100px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.payment{
+  width: 100%;
+  padding: 30px 0px;
+}
+
+.payment div{
+  width: 100%;
+  background: rgb(231, 231, 231);
+  padding: 10px;
+}
+
+.payment p{
+  font-size: .9rem;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+.button1{
+  max-width: 100px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  padding: 12px 15px;
+}
+
+.button1 span{
+  cursor: pointer;
+}
+
+.coupon{
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 5px;
+  background-color: white;
+  border-radius: 40px;
+  margin-top: 30px;
+}
+
+.coupon input{
+  width: 100%;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 10px 20px;
+}
+
+.coupon button{
+  border: none;
+  background: rgb(12, 12, 12);
+  color: white;
+  border-radius: 30px;
+  padding: 11px 25px;
+}
+
+.checkout{
+  width: 100%;
+  border: none;
+  padding: 16px 0;
+  background: #007bff;
+  color: white;
+  border-radius: 40px;
+  font-size: .9rem;
+  transition: all ease .5s;
+}
+
+.checkout:hover {
+  background: rgb(12, 12, 12);
+}
+
+
+@media screen and (max-width: 600px) {
+.card div{
+  width: 70%;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.name, .name2{
+  width: 180px;
+}
+
+.amount{
+  width: fit-content;
+}
+
+.total{
+  width: 100%;
+  max-width: 100%;
+}
+  
+}

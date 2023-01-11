@@ -43,6 +43,7 @@
   font-size: 1.1rem;
   font-weight: 500;
   padding: 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .category{
@@ -70,6 +71,8 @@
   align-items: center;
   gap: 20px;
   padding: 30px 0;
+  flex-shrink: 0;
+  flex-wrap: wrap-reverse;
 }
 
 .button2, .button3{

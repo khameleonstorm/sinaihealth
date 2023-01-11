@@ -5,13 +5,17 @@ import Navbar from "../../components/Navbar/Navbar"
 import Footer from "../../components/Footer/Footer"
 import { drugs } from "../../utils/drugs"
 import ShopBottomNav from "../../components/ShopBottomNav/ShopBottomNav"
+import Cart from "../../components/Cart/Cart";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
+import Checkout from "../../components/checkout/Checkout"
 
 
 export default function Index() {
   const router = useRouter()
   const { drug } = router.query
+  const { showCart, showCheckout } = useContext(CartContext)
 
-  console.log(drugs[drug])
 
   return (
     <>
@@ -21,10 +25,12 @@ export default function Index() {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
       </Head>
-      <Navbar />
+      <Navbar cart={true}/>
       <DrugDetails drug={drugs[drug]}/>
       <ShopBottomNav />
       <Footer drug={true}/>
+      {showCart &&<Cart />}
+      {showCheckout &&<Checkout />}
     </>
   )
 }

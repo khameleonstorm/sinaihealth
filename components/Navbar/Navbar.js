@@ -2,16 +2,32 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../public/assets/mainlogo.png";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import { BiCaretDown } from "react-icons/bi"
 import { BsCart4 } from "react-icons/bs";
-import { treatments } from "../../utils/text"
-import { useRouter } from 'next/router'
+import { treatments } from "../../utils/text";
+import { useRouter } from 'next/router';
+import { CartContext } from "../../context/CartContext";
 
 export default function Navbar({cart}) {
   const router = useRouter()
   const [menu, setMenu] = useState(false)
   const [showTreatments, setShowTreatments] = useState(false)
+  const { items, dispatch, showCart } = useContext(CartContext)
+  const [totalAmount, setTotalAmount] = useState(0)
+  const [totalItem, setTotalItem] = useState(0)
+
+  useEffect(() => {
+    const combine = items?.map(item => item.amount * item.quantity)
+
+    if(combine.length > 0) {
+      const added = combine.reduce((a, c) => a + c, 0)
+      setTotalAmount(added)
+      setTotalItem(combine.length)
+      console.log(added, "added")
+    }
+
+  }, [items])
 
 
   return (
@@ -24,7 +40,7 @@ export default function Navbar({cart}) {
         </div>
         <div className={styles.menu} style={menu? {right: "0"} : {right: "-100vw"}}>
           <Link href="/">Home</Link>
-          <Link href="#"
+          <Link href="/treatments"
             onMouseOver={() => setShowTreatments(!showTreatments)}
             className={styles.treatment}>
               <span onClick={() => router.push('/treatments')}>Treatments</span> 
@@ -55,12 +71,12 @@ export default function Navbar({cart}) {
         </div>
 
           {cart &&
-          <div className={styles.cartAmount}>
+          <div className={styles.cartAmount} onClick={() => dispatch({type: "SHOWCART", payload: !showCart})}>
             <div className={styles.cartIcon}>
               <BsCart4 />
-              <div>0</div>
+              <div>{totalItem}</div>
             </div>
-            <p>£0.00</p>
+            <p>£{totalAmount}.00</p>
           </div>
           }
       </div>

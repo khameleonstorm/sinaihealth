@@ -5,8 +5,15 @@ import HomeHero from "../../components/HomeHero/HomeHero";
 import Navbar from "../../components/Navbar/Navbar";
 import { pharmacy } from "../../utils/heroes";
 import { drugs } from "../../utils/drugs";
+import Cart from "../../components/Cart/Cart";
+import { CartContext } from "../../context/CartContext";
+import { useContext } from "react";
+import Checkout from "../../components/checkout/Checkout";
 
 export default function index() {
+  const { showCart, showCheckout } = useContext(CartContext)
+
+
   return (
     <>
       <Head>
@@ -17,8 +24,10 @@ export default function index() {
       </Head>
       <Navbar cart={true}/>
       <HomeHero heroes={pharmacy} regular={true} shop={true}/>
-      <DrugCards drugs={drugs} />
+      <DrugCards drugs={drugs}/>
       <Footer drug={true}/>
+      {showCart &&<Cart />}
+      {showCheckout &&<Checkout />}
       </>
   )
 }
