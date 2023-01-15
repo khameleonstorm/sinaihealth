@@ -3,6 +3,12 @@ import { BsHeadset } from "react-icons/bs"
 import styles from './ContactForm.module.css'
 
 export default function ContactForm() {
+
+  const handleSubmit =(e) => {
+    e.preventDefault();
+  }
+
+
   return (
     <div className={styles.container}>
       <div className={styles.wrapper}>
@@ -21,7 +27,7 @@ export default function ContactForm() {
           </div>
           <button>Contact us</button>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <h1>Schedule An Appointment</h1>
           <TextField fullWidth label="First Name" id="firstName" />
           <TextField fullWidth label="Last Name" id="lastName" />

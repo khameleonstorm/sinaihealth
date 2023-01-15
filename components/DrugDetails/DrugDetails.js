@@ -15,9 +15,9 @@ export default function DrugDetails({drug}) {
   const { items, dispatch } = useContext(CartContext)
   
   const reduceQuantity = () =>{
-    const newItem = {...drug, quantity: drug.quantity - 1}
+    const newItem = {...drug, quantity: quantity - 1}
 
-    if(drug.quantity > 1) {
+    if(quantity > 1) {
       dispatch({type: "UPDATEQUANTITY", payload: newItem})
       setQuantity(prev => prev - 1)
     }
@@ -41,21 +41,24 @@ export default function DrugDetails({drug}) {
   }
 
 
+  const checkout = () => {
+    dispatch({type: "SHOWCHECKOUT", payload: true})
+  }
+
 
 
   useEffect(() =>{
     if(drugs){
       const related = drugs.filter(d => d?.category.toLowerCase().includes(drug?.category.toLowerCase()))
       if (related.length > 0){
-        setRelatedDrugs(related)
+        setRelatedDrugs(related.filter(item => item.name !== drug?.name))
         setIsRelated(true)
       }
     }
   }, [drugs, isRelated])
 
-  console.log(drug, relatedDrugs)
 
-  return (drug &&
+  return (drug && drugs &&
     <div className={styles.container}>
       <div className={styles.img}>
         <Image src={drug.src} alt={drug.name} width="300" height="300" />
@@ -79,7 +82,11 @@ export default function DrugDetails({drug}) {
 
         <div className={styles.addTo}>
           <button className={styles.button2} onClick={addToCart}><span><BsCart4 /></span>Add to cart</button>
-          <button className={styles.button3}><span><BsCart4 /></span>Buy Now</button>
+          <button 
+          onClick={checkout}
+          className={styles.button3}>
+            <span><BsCart4 /></span>Buy Now
+          </button>
           <div className={styles.button1}>
             <span onClick={reduceQuantity}>-</span>
             {quantity}

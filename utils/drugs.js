@@ -309,7 +309,7 @@ export const drugs = [
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
     amount: 21,
-    src: "/assets/drugs/Chlortalidone.jpg",
+    src: "/assets/drugs/chlortalidone.jpeg",
     desc: "Chlorthalidone, a ‘water pill,’ is used to treat high blood pressure and fluid retention caused by various conditions, including heart disease. It causes the kidneys to get rid of unneeded water and salt from the body into the urine. This medicine is sometimes prescribed for other uses; ask your doctor or pharmacist for more information",
     note: {
       title: "",

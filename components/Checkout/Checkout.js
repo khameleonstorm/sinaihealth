@@ -3,11 +3,13 @@ import { CartContext } from "../../context/CartContext";
 import { useContext, useEffect, useState } from 'react';
 import { FormControl, InputLabel, MenuItem, Select, TextField } from '@mui/material';
 import { countries } from '../../utils/countries';
-import { VscClose } from "react-icons/vsc"
-import { BiArrowBack } from "react-icons/bi"
+import { VscClose } from "react-icons/vsc";
+import { BiArrowBack } from "react-icons/bi";
+import Funding from '../Funding/Funding';
 
 
 export default function Checkout() {
+  const [close, setClose] = useState(false);
   const { items, dispatch } = useContext(CartContext)
   const [totalAmount, setTotalAmount] = useState(0)
   const [totalItem, setTotalItem] = useState(0)
@@ -46,6 +48,7 @@ export default function Checkout() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    openModal(true)
     const data = {
       fullName: values.fullName,
       companyName: values.companyName,
@@ -104,6 +107,14 @@ export default function Checkout() {
     console.log(data);
   };
 
+  const closeModal = (e) => {
+    setClose(e)
+  }
+
+  const openModal = (e) => {
+    setClose(e)
+  }
+
 
   useEffect(() => {
     const combine = items.map(item => item.amount * item.quantity)
@@ -114,12 +125,12 @@ export default function Checkout() {
       setTotalItem(combine.length)
       console.log(added, "added")
     }
-
   }, [items])
 
 
   return (items.length > 0 &&
     <div className={styles.container}>
+      {close &&<Funding closeModal={closeModal}/>}
       <div className={styles.wrapper}>
       <div className={styles.formWrapper}>
         <h1 className={styles.title}>Checkout</h1>
@@ -241,7 +252,6 @@ export default function Checkout() {
         rows={4}
         autoComplete='off'
         onChange={handleChange("note")}/>
-
         </form>
       </div>
 
@@ -282,7 +292,11 @@ export default function Checkout() {
           </div>
         </div>
 
-        <button className={styles.checkout}>Place Order</button>
+        <button 
+        onClick={handleSubmit}
+        className={styles.checkout}>
+          Place Order
+        </button>
       </div>
       </div>
       <VscClose className={styles.close}

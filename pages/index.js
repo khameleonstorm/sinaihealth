@@ -11,6 +11,8 @@ import ThirdSection from '../components/ThirdSection/ThirdSection'
 import Plans from '../components/plans/Plans'
 import Footer from '../components/Footer/Footer'
 import { homeHero } from '../utils/heroes'
+import { section1, section2 } from '../utils/section'
+import CareerCards from '../components/CareerCards/CareerCards'
 
 export default function Home() {
   return (
@@ -24,10 +26,12 @@ export default function Home() {
       <Navbar />
       <HomeHero heroes={homeHero}/>
       <ContactForm />
-      <FirstSection />
+      <FirstSection text={section1} normal={true} reversed={true}/>
+      <FirstSection text={section2}/>
       <SecondSection treatments={treatments}/>
       <ThirdSection />
       <Plans />
+      <CareerCards home={true}/>
       <Footer />
     </>
   )

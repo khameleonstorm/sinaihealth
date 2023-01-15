@@ -66,3 +66,27 @@
   font-size: 2rem;
 }
 
+
+
+@media screen and (max-width: 1000px) {
+.wrapper1, .wrapper2{
+  flex-direction: column;
+}
+
+.text, .img{
+  max-width: 100%;
+}
+}
+
+
+@media screen and (max-width: 600px) {
+.wrapper1, .wrapper2{
+  padding: 20px 10px;
+  gap: 30px;
+}
+
+.img img{
+  border-radius: 3px;
+}
+}
+
