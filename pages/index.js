@@ -13,6 +13,7 @@ import Footer from '../components/Footer/Footer'
 import { homeHero } from '../utils/heroes'
 import { section1, section2 } from '../utils/section'
 import CareerCards from '../components/CareerCards/CareerCards'
+import BranchLogos from '../components/BranchLogos/BranchLogos'
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <ThirdSection />
       <Plans />
       <CareerCards home={true}/>
+      <BranchLogos />
       <Footer />
     </>
   )

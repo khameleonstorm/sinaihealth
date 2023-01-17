@@ -1,10 +1,12 @@
 import Head from "next/head";
 import AboutVid from "../../components/AboutVid/AboutVid";
 import ContactForm from "../../components/ContactForm/ContactForm";
+import FirstSection from "../../components/FirstSection/FirstSection";
 import Footer from "../../components/Footer/Footer";
 import HomeHero from "../../components/HomeHero/HomeHero";
 import Navbar from "../../components/Navbar/Navbar";
 import { about } from "../../utils/heroes";
+import { ourleaders } from "../../utils/about";
 
 export default function index() {
   return (
@@ -19,6 +21,7 @@ export default function index() {
       <HomeHero heroes={about} regular={true}/>
       <ContactForm />
       <AboutVid />
+      <FirstSection text={ourleaders} normal={true} reversed={true}/>
       <Footer />
     </>
   )
