@@ -7,7 +7,7 @@ import { drugs } from "../../utils/drugs";
 import Cart from "../../components/Cart/Cart";
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
-import Checkout from "../../components/checkout/Checkout";
+import Checkout from "../../components/Checkout/Checkout";
 
 export default function Index() {
   const { showCart, showCheckout } = useContext(CartContext)
