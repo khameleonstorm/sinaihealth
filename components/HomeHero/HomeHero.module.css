@@ -135,6 +135,7 @@
 @media screen and (max-width: 1000px) {
 .heroText h1{
   font-size: 15vw;
+  font-weight: 400;
 }
 
 .heroText p{
@@ -153,10 +154,12 @@
 }
   
 .heroText {
-  padding: 20px;
+  padding: 10px;
+  background-color: rgba(240, 248, 255, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .heroText p{
-  font-size: 4.5vw;
+  font-size: 4vw;
 }
 }
