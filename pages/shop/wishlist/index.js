@@ -8,7 +8,7 @@ import Cart from "../../../components/Cart/Cart"
 import Checkout from "../../../components/Checkout/Checkout"
 import { CartContext } from "../../../context/CartContext"
 
-export default function index() {
+export default function Index() {
   const [wish, setWish] = useState(null)
   const { showCart, showCheckout } = useContext(CartContext)
 

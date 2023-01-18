@@ -10,7 +10,7 @@ import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import Checkout from "../../components/checkout/Checkout";
 
-export default function index() {
+export default function Index() {
   const { showCart, showCheckout } = useContext(CartContext)
 
 
