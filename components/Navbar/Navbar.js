@@ -1,5 +1,5 @@
 import styles from "./Navbar.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import logo from "../../public/assets/mainlogo.png";
 import { useState, useContext, useEffect } from "react";
@@ -36,9 +36,12 @@ export default function Navbar({cart}) {
         <div className={styles.logo}>
           <Link href="/">
             <Image 
-            priority
             src={logo}
-            alt="mountsinai logo"/>
+            alt="mountsinai logo"
+            priority
+            width="100"
+            height="50"
+            />
           </Link>
         </div>
         <div className={styles.menu} style={menu? {right: "0"} : {right: "-100vw"}}>

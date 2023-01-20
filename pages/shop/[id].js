@@ -1,13 +1,13 @@
-import Head from "next/head"
-import DrugDetails from "../../components/DrugDetails/DrugDetails"
-import Navbar from "../../components/Navbar/Navbar"
-import Footer from "../../components/Footer/Footer"
-import { drugs } from "../../utils/drugs"
+import Head from "next/head";
+import DrugDetails from "../../components/DrugDetails/DrugDetails";
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+import { drugs } from "../../utils/drugs";
 import ShopBottomNav from "../../components/ShopBottomNav/ShopBottomNav"
 import Cart from "../../components/Cart/Cart";
 import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
-import Checkout from "../../components/Checkout/Checkout"
+import Checkout from "../../components/Checkout/Checkout";
 
 
 export default function Index(props) {
