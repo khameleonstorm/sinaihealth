@@ -9,7 +9,7 @@ import { CartContext } from "../../context/CartContext";
 import { useContext } from "react";
 import Checkout from "../../components/Checkout/Checkout";
 
-export default function Index() {
+export default function Index(props) {
   const { showCart, showCheckout } = useContext(CartContext)
 
 
@@ -22,11 +22,21 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
       </Head>
       <Navbar cart={true}/>
-      <DrugCards drugs={drugs} shop={true}/>
+      <DrugCards drugs={props.drugs} shop={true}/>
       <ShopBottomNav />
       <Footer drug={true}/>
       {showCart &&<Cart />}
       {showCheckout &&<Checkout />}
     </>
   )
+}
+
+
+export async function getStaticProps() {
+
+  return {
+    props: {
+      drugs
+    },
+  }
 }

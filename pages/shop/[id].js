@@ -1,5 +1,4 @@
 import Head from "next/head"
-import { useRouter } from "next/router"
 import DrugDetails from "../../components/DrugDetails/DrugDetails"
 import Navbar from "../../components/Navbar/Navbar"
 import Footer from "../../components/Footer/Footer"
@@ -11,9 +10,7 @@ import { useContext } from "react";
 import Checkout from "../../components/Checkout/Checkout"
 
 
-export default function Index() {
-  const router = useRouter()
-  const { drug } = router.query
+export default function Index(props) {
   const { showCart, showCheckout } = useContext(CartContext)
 
 
@@ -26,7 +23,7 @@ export default function Index() {
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
       </Head>
       <Navbar cart={true}/>
-      <DrugDetails drug={drugs[drug]}/>
+      <DrugDetails drug={props.drug}/>
       <ShopBottomNav />
       <Footer drug={true}/>
       {showCart &&<Cart />}
@@ -34,3 +31,26 @@ export default function Index() {
     </>
   )
 }
+
+
+export async function getStaticPaths() {
+  const paths = drugs.map((drug) => ({
+    params: { id:  drug.name},
+  }))
+
+  return { paths, fallback: 'blocking' }
+}
+
+
+export async function getStaticProps(context) {
+
+  const drug = drugs.find(drug => drug.name === context.params.id)
+  
+
+  return {
+    props: {
+      drug,
+    },
+  }
+}
+

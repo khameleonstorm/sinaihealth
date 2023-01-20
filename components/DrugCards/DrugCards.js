@@ -6,6 +6,7 @@ import { CiSearch } from "react-icons/ci";
 import { useEffect, useState, useContext } from "react";
 import { useRouter } from "next/router";
 import { CartContext } from "../../context/CartContext";
+import Image from "next/legacy/image";
 
 export default function DrugCards({drugs, shop, details}) {
   const router = useRouter()
@@ -74,7 +75,18 @@ export default function DrugCards({drugs, shop, details}) {
        {likedItems.filter(likedItem => likedItem.name === drug.name).length > 0 && <FaHeart className={styles.fav} onClick={() => handleFav(drug)}/>}
 
        {likedItems.filter(likedItem => likedItem.name !== drug.name) && <FaRegHeart className={styles.fav} onClick={() => handleFav(drug)}/>}
-        <img src={drug.src} alt={drug.name} onClick={() => {router.push(`/shop/${i}`)}}/>
+        <Image 
+        src={drug.src} 
+        alt={drug.name} 
+        width="300"
+        height="300"
+        sizes="(max-width: 768px) 100vw,
+        (max-width: 1200px) 100%,
+        100%"
+        blurDataURL={drug.src}
+        placeholder='blur'
+        priority
+        onClick={() => {router.push(`/shop/${drug.name}`)}}/>
         <h2 className={styles.name}>{drug.name}</h2>
         <div className={styles.rating}>
         <Rating

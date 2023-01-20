@@ -8,7 +8,7 @@ export default function TreatmentsContent({content, treatments}) {
     <div className={styles.container}>
       <div className={styles.sidebar}>
         <h2>Treatments</h2>
-        {treatments.map((link, i) => <Link href={`/treatments/${i}`} key={i}>{link.name}</Link>)}
+        {treatments?.map((link, i) => <Link href={`/treatments/${i}`} key={i}>{link.name}</Link>)}
       </div>
       <div className={styles.main}>
         {content?.map((c, i) =>

@@ -7,7 +7,7 @@ import SecondSection from "../../components/SecondSection/SecondSection";
 import { treatmentsHero } from "../../utils/heroes";
 import { treatments } from "../../utils/text";
 
-export default function index() {
+export default function index(props) {
   return (
     <>
       <Head>
@@ -17,10 +17,22 @@ export default function index() {
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"/>
       </Head>
       <Navbar />
-      <HomeHero heroes={treatmentsHero} regular={true}/>
+      <HomeHero heroes={props.treatmentsHero} regular={true}/>
       <ContactForm />
-      <SecondSection treatments={treatments}/>
+      <SecondSection treatments={props.treatments}/>
       <Footer />
     </>
   )
+}
+
+
+
+export async function getStaticProps() {
+
+  return {
+    props: {
+      treatments,
+      treatmentsHero
+    },
+  }
 }

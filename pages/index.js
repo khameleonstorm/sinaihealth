@@ -15,7 +15,8 @@ import { section1, section2 } from '../utils/section'
 import CareerCards from '../components/CareerCards/CareerCards'
 import BranchLogos from '../components/BranchLogos/BranchLogos'
 
-export default function Home() {
+export default function Home(props) {
+
   return (
     <>
       <Head>
@@ -25,11 +26,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <HomeHero heroes={homeHero}/>
+      <HomeHero heroes={props.homeHero}/>
       <ContactForm />
-      <FirstSection text={section1} normal={true} reversed={true}/>
-      <FirstSection text={section2}/>
-      <SecondSection treatments={treatments}/>
+      <FirstSection text={props.section1} normal={true} reversed={true}/>
+      <FirstSection text={props.section2}/>
+      <SecondSection treatments={props.treatments}/>
       <ThirdSection />
       <Plans />
       <CareerCards home={true}/>
@@ -37,4 +38,17 @@ export default function Home() {
       <Footer />
     </>
   )
+}
+
+
+export async function getStaticProps() {
+
+  return {
+    props: {
+      treatments,
+      section2,
+      section1,
+      homeHero
+    },
+  }
 }

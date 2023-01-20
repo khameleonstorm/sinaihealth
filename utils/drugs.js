@@ -79,7 +79,7 @@ export const drugs = [
     }
   },
   {
-    name: "Arazo Nutrition Blood Sugar 365 Supplement – 120 Herbal Pills – 120 Day Supply",
+    name: "Arazo Nutrition Blood Sugar",
     category: "Diabetics",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -246,7 +246,7 @@ export const drugs = [
   },
 
   {
-    name: "Cardinal Laboratories Remedy and Recovery Wound and Infection Medication for Pets, 4-Ounce, White (43804)",
+    name: "Cardinal Laboratories Remedy",
     category: "Infection",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -371,7 +371,7 @@ export const drugs = [
   },
 
   {
-    name: "CuraLin by Curalife – 100% Natural | 9 Potent Ingredients | (180 Capsules – 30-60 Day Supply)",
+    name: "CuraLin by Curalife",
     category: "Diabetes",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -435,7 +435,7 @@ export const drugs = [
   }, 
 
   {
-    name: "Doctor Stephanie’s Nerve Miracle Maximum Strength Supplement – Nerve Health in Legs, Feet, Hands, Toes – Mega Dose of Alpha Lipoic Acid ALA and Vitamin B12",
+    name: "Dr Stephanie's Nerve Miracle",
     category: "Diabetes",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -457,7 +457,7 @@ export const drugs = [
   },
   
   {
-    name: "Doctor’s Best Benfotiamine, Non-GMO, Vegan, Gluten Free, Soy Free, Helps Maintain Blood Sugar Levels, 300 mg, 60 Veggie Caps (DRB-00270)",
+    name: "Dr Best Benfotiamine",
     category: "Diabetes",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -478,7 +478,7 @@ export const drugs = [
   },
 
   {
-    name: "Doctor’s Best Cinnamon Extract with Cinsulin, Helps Maintain Blood Sugar Levels, Improve Cardiovascular Health, Enhance Insulin Function, Antioxidant, Non-GMO, Vegan, Gluten Free, Soy Free, 250 Mg",
+    name: "Dr Best Cinnamon Extract",
     category: "Diabetes",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -518,7 +518,7 @@ export const drugs = [
 
 
  {
-    name: "Dr. Christopher’s Infection 100 caps",
+    name: "Dr. Christopher's Infection",
     category: "Infection",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -570,7 +570,7 @@ export const drugs = [
   },
   
   {
-    name: "ex-lax Regular Strength Constipation Stimulant Laxative Chocolate Pieces, 24 Count",
+    name: "ex-lax Regular Strength",
     category: "Uncategorized",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -625,7 +625,7 @@ export const drugs = [
   },
   
   {
-    name: "GABA (PharmaGABA), L-Theanine, 5-HTP + Chamomile – Calm, Mood + Serotonin Support Supplement – Non-GMO + Soy Free (60 Capsules)",
+    name: "GABA (PharmaGABA)",
     category: "Depression",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -723,7 +723,7 @@ export const drugs = [
   },
   
   {
-    name: "INF Formula (Formerly Infection Formula), 100 Caps (3 Pack)",
+    name: "INF Formula",
     category: "Infection",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -758,7 +758,7 @@ export const drugs = [
   },
 
   {
-    name: "Jarrow Formulas Saccharomyces Boulardii + MOS – 5 Billion Viable Organisms Per Serving – 90 Delayed Release Veggie Caps – Probiotic + Prebiotic – Intestinal Tract Support – Up to 90 Servings",
+    name: "Jarrow Formulas Saccharomyces",
     category: "Infection",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -827,7 +827,7 @@ export const drugs = [
   },
   
   {
-    name: "LifeSeasons – Anxie-T – Herbal Stress Relief Supplement to Relax and Calm Mind – Contains Ashwagandha, Kava Kava, GABA, L-Theanine – 60 Capsules",
+    name: "LifeSeasons - Anxie-T",
     category: "Depression",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -913,7 +913,7 @@ export const drugs = [
   }, 
   
   {
-    name: "Metagenics Serenagen? ? Traditional Herbal Stress Management Formula* (180 Tablets)",
+    name: "Metagenics Serenagen",
     category: "depression",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -977,7 +977,7 @@ export const drugs = [
   },
   
   {
-    name: "Mood Support – 100% Plant-Based Mood and Stress Support Supplement – Natural Adaptogenic Mood Booster with Ashwagandha and Rhodiola Rosea to Help Relax Mind | Contains 12 Powerful Herbs",
+    name: "Mood Support",
     category: "Depression",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -993,7 +993,7 @@ export const drugs = [
   },
   
    {
-    name: "Nature’s Way Completia Diabetic Multivitamin, High Potency B-Vitamins. 90 Tablets",
+    name: "Nature's Way Completia Diabetic",
     category: "Diabetes",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -1027,7 +1027,7 @@ export const drugs = [
   },
   
   {
-    name: "Neosporin Original First Aid Antibiotic Ointment with Bacitracin Zinc for Infection Protection, Wound Care Treatment & Scar Appearance Minimizer for Minor Cuts, Scrapes and Burns, 1 oz",
+    name: "Neosporin First Aid Antibiotic",
     category: "Infection",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -1092,7 +1092,7 @@ export const drugs = [
   },
   
   {
-    name: "Non GMO Cranberry Concentrate Supplement Pills for Urinary Tract Infection UTI.",
+    name: "Non GMO Cranberry",
     category: "Infection",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -1108,7 +1108,7 @@ export const drugs = [
   },
   
   {
-    name: "NOW Supplements, AlliBiotic CF?, with Garlic Extract, Olive Leaf Extract, Elderberry & Oregano, Non-Drowsy Formula, 60 Softgels.",
+    name: "NOW Supplements, AlliBiotic CF?",
     category: "Infection",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -1124,7 +1124,7 @@ export const drugs = [
   },
   
   {
-    name: "Nutrisuppz Formula 900mg With Gaba, L-Theanine, 5-HTP, Ashwagandha, Chamomile, 60 Caps",
+    name: "Nutrisuppz Formula",
     category: "depression",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -1140,7 +1140,7 @@ export const drugs = [
   },
   
   {
-    name: " Nutrivein Organic Sea Moss 1600mg Plus Bladderwrack & Burdock – 120 Capsules – Prebiotic Super Food Boosts The Immune System & Digestive Health – Thyroid, Healthy Skin, Keto Detox, Gut, Joint Support",
+    name: " Nutrivein Organic Sea Moss",
     category: "diabetes",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -1182,7 +1182,7 @@ export const drugs = [
     note: {
       title: "",
       desc: [
-       "How should I take Percocet?   Take Percocet exactly as prescribed by your doctor. Follow all directions on your prescription label. Never take this medicine in larger amounts, or for longer than prescribed. An overdose can damage your liver or cause death. Tell your doctor if you feel an increased urge to use more of this medicine. Never share this medicine with another person, especially someone with a history of drug abuse or addiction. MISUSE CAN CAUSE ADDICTION, OVERDOSE, OR DEATH. Keep the medicine in a place where others cannot get to it. Selling or giving away Percocet is against the law.   If you need surgery or medical tests, tell the doctor ahead of time that you are using Percocet.   You should not stop using Percocet suddenly. Follow your doctor’s instructions about tapering your dose.   Store at room temperature away from moisture and heat. Keep track of your medicine. You should be aware if anyone is using it improperly or without a prescription.",
+       "How should I take Percocet?  Take Percocet exactly as prescribed by your doctor. Follow all directions on your prescription label. Never take this medicine in larger amounts, or for longer than prescribed. An overdose can damage your liver or cause death. Tell your doctor if you feel an increased urge to use more of this medicine. Never share this medicine with another person, especially someone with a history of drug abuse or addiction. MISUSE CAN CAUSE ADDICTION, OVERDOSE, OR DEATH. Keep the medicine in a place where others cannot get to it. Selling or giving away Percocet is against the law.   If you need surgery or medical tests, tell the doctor ahead of time that you are using Percocet.   You should not stop using Percocet suddenly. Follow your doctor’s instructions about tapering your dose.   Store at room temperature away from moisture and heat. Keep track of your medicine. You should be aware if anyone is using it improperly or without a prescription.",
       ]
     }
   },
@@ -1204,7 +1204,7 @@ export const drugs = [
   }, 
 
   {
-    name: "Premium Blood Sugar Support Supplement by PurePremium (Non-GMO) Support Glucose Metabolism",
+    name: "Premium Blood Sugar Support",
     category: "diabetes",
     sold: randomNumber({min: 50, max: 1000, integer: true}),
     discount: randomNumber({min: 5, max: 60, integer: true}),
@@ -1426,20 +1426,4 @@ export const drugs = [
       ]
     }
   },
-  
-  {
-    name: "Xofigo",
-    category: "Oncologics",
-    sold: randomNumber({min: 50, max: 1000, integer: true}),
-    discount: randomNumber({min: 5, max: 60, integer: true}),
-    amount:6500,
-    src: "/assets/drugs/Xofigo.jpg",
-    desc: "Xofigo is indicated for the treatment of patients with castration-resistant prostate cancer, symptomatic bone metastases and no known visceral metastatic disease.",
-    note: {
-      title: "",
-      desc: [
-       "Xofigo is a radiopharmaceutical (a medicine containing a radioactive substance) that is used to treat adults with cancer of the prostate (a gland of the male reproductive system).   Xofigo is used when castration (to stop the production of male hormones) by surgery or with medicines does not work, and when the cancer has spread to the bones (bone metastases) and is causing symptoms such as pain, but has not spread to other internal organs. It should be used only for patients who have had at least two previous treatments for prostate cancer or who cannot receive other treatments.",
-      ]
-    }
-  }, 
 ]

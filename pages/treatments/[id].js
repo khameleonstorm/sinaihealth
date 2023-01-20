@@ -1,5 +1,6 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
+import { useEffect, useState } from "react"
 import ContactForm from "../../components/ContactForm/ContactForm"
 import Footer from "../../components/Footer/Footer"
 import HomeHero from "../../components/HomeHero/HomeHero"
@@ -8,15 +9,23 @@ import TreatmentsContent from "../../components/TreatmentsContent/TreatmentsCont
 import { treatments } from "../../utils/text"
 
 
-export default function Index() {
+export default function Index(props) {
+  const [hero, setHero] = useState(null)
+  const [content, setContent] = useState(null)
   const router = useRouter()
-  const { trt } = router.query
+  // const { id } = router.query
 
-  const hero = [{
-    title: treatments[trt]?.name,
-    subtitle: "Discovering and delivering life-changing care",
-    bg: treatments[trt]?.img?.src
-  }]
+
+  useEffect(() => {
+    const hero = [{
+      title: props.treatment.name,
+      subtitle: "Discovering and delivering life-changing care",
+      bg: props.treatment.img?.src
+    }]
+    setHero(hero)
+    setContent(props.treatment.content)
+  }, [])
+
 
   return (
     <>
@@ -29,8 +38,32 @@ export default function Index() {
       <Navbar />
       <HomeHero heroes={hero} regular={true}/>
       <ContactForm />
-      <TreatmentsContent content={treatments[trt]?.content} treatments={treatments} />
+      <TreatmentsContent content={content} treatments={props.treatments} />
       <Footer />
     </>
   )
+}
+
+
+
+
+export async function getStaticPaths() {
+  const paths = treatments.map((treatment) => ({
+    params: { id:  treatment.name},
+  }))
+
+  return { paths, fallback: true }
+}
+
+
+export async function getStaticProps(context) {
+
+  const treatment = treatments.find(treatment => treatment.name === context.params.id)
+  
+
+  return {
+    props: {
+      treatment,
+    },
+  }
 }

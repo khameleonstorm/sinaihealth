@@ -19,6 +19,11 @@
   position: relative;
 }
 
+.logo img{
+  width: 130px;
+  object-fit: contain;
+}
+
 .menu{
   width: fit-content;
   display: flex;
