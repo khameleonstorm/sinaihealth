@@ -1,11 +1,8 @@
-import firstSec from "../public/assets/firstSec.jpg";
-import covid from "../public/assets/covid19.jpg";
-
 
 export const section1 = {
   title: "COVID-19 Information and Resources",
   desc: "During the COVID-19 pandemic, our priority is to ensure the safety and well-being of our patients and our people. Learn about what you need to know before coming to one of our hospitals.",
-  src: covid,
+  src: "/assets/covid19.jpg",
   link: "/about",
   button: "See Covid-19 Resources"
 }
@@ -13,7 +10,7 @@ export const section1 = {
 export const section2 = {
   title: "Medical hospital center & health care",
   desc: "In January 2015, Sinai Health was formed through the integration of Mount Sinai Hospital, Hennick Bridgepoint Hospital, the Lunenfeld-Tanenbaum Research Institute, and the affiliation with our system partner, Circle of Care.",
-  src: firstSec,
+  src: "/assets/firstSec.jpg",
   link: "/about",
   button: "Discover More"
 }

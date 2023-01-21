@@ -24,7 +24,6 @@ export default function Navbar({cart}) {
       const added = combine.reduce((a, c) => a + c, 0)
       setTotalAmount(added)
       setTotalItem(combine.length)
-      console.log(added, "added")
     }
 
   }, [items])

@@ -35,7 +35,7 @@ export default function ContactForm() {
           <TextField fullWidth label="Phone" id="phone" type="tel"/>
           <TextField fullWidth label="" id="date" type="date"/>
           <TextField fullWidth label="Message" id="message" />
-          <button>Book Appointment</button>
+          <button type='submit'>Book Appointment</button>
         </form>
       </div>
     </div>
