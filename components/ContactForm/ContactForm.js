@@ -29,12 +29,12 @@ export default function ContactForm() {
         </div>
         <form onSubmit={handleSubmit}>
           <h1>Schedule An Appointment</h1>
-          <TextField fullWidth label="First Name" id="firstName" />
-          <TextField fullWidth label="Last Name" id="lastName" />
-          <TextField fullWidth label="Email" id="email" type="email" />
-          <TextField fullWidth label="Phone" id="phone" type="tel"/>
-          <TextField fullWidth label="" id="date" type="date"/>
-          <TextField fullWidth label="Message" id="message" />
+          <TextField label="First Name" id="firstName" />
+          <TextField label="Last Name" id="lastName" />
+          <TextField label="Email" id="email"/>
+          <TextField label="Phone" id="phone"/>
+          <input className={styles.date} id="date" type="date"/>
+          <TextField label="Message" id="message" />
           <button type='submit'>Book Appointment</button>
         </form>
       </div>

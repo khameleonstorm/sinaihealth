@@ -18,12 +18,14 @@ export default function Navbar({cart}) {
   const [totalItem, setTotalItem] = useState(0)
 
   useEffect(() => {
-    const combine = items?.map(item => item.amount * item.quantity)
+    if(items.length > 0){
+      const combine = items?.map(item => item.amount * item.quantity)
 
-    if(combine.length > 0) {
-      const added = combine.reduce((a, c) => a + c, 0)
-      setTotalAmount(added)
-      setTotalItem(combine.length)
+      if(combine.length > 0) {
+        const added = combine.reduce((a, c) => a + c, 0)
+        setTotalAmount(added)
+        setTotalItem(combine.length)
+      }
     }
 
   }, [items])

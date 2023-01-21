@@ -75,6 +75,16 @@
   border-radius: 5px;
 }
 
+.date{
+  width: 100%;
+  max-width: 220px;
+  height: 55px;
+  padding: 10px;
+  background: none;
+  border: .5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
 .wrapper form h1{
   width: 100%;
   font-size: 2.5rem;
@@ -130,5 +140,9 @@
 .wrapper form h1{
   font-size: 6.5vw;
   padding-bottom: 20px;
+}
+
+.date{
+  max-width: 100%;
 }
 }
