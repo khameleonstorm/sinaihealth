@@ -15,15 +15,17 @@ const addItem = (item) => {
 
   if(items === null) {
     window.localStorage.setItem("sinai_cart", JSON.stringify([]))
-  } 
-
+  } else {
   // check if the item already exists
   const checkArray = items.filter(drug => drug.name === item.name)
-
+  
   if(checkArray.length === 0) {
     items.push(newItem)
     window.localStorage.setItem("sinai_cart", JSON.stringify(items))
   }
+  }
+
+
 }
 
 const removeItem = (drug) => {

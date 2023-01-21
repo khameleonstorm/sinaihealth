@@ -56,7 +56,7 @@ export default function DrugCards({drugs, shop, details}) {
 
     const items = JSON.parse(window.localStorage.getItem("sinai_wishList"))
     setLikedItems(items)
-  }, [search, likedItems.length])
+  }, [search, likedItems])
 
   return (
     <>
@@ -72,9 +72,9 @@ export default function DrugCards({drugs, shop, details}) {
     <div className={styles.container}>
       {filteredDoc?.map((drug, i) => 
       <div key={i} className={styles.card}>
-       {likedItems.filter(likedItem => likedItem.name === drug.name).length > 0 && <FaHeart className={styles.fav} onClick={() => handleFav(drug)}/>}
+       {likedItems?.filter(likedItem => likedItem.name === drug.name).length > 0 && <FaHeart className={styles.fav} onClick={() => handleFav(drug)}/>}
 
-       {likedItems.filter(likedItem => likedItem.name !== drug.name) && <FaRegHeart className={styles.fav} onClick={() => handleFav(drug)}/>}
+       {likedItems?.filter(likedItem => likedItem.name !== drug.name) && <FaRegHeart className={styles.fav} onClick={() => handleFav(drug)}/>}
         <Image 
         src={drug.src} 
         alt={drug.name} 
